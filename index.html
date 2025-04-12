@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据科学日志 | 张三</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #34495e;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            background: var(--primary-color);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-weight: 500;
+        }
+
+        header {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .post-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        article {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin: 1.5em 0 1em;
+        }
+
+        h1 { font-size: 2.5em; }
+        h2 { font-size: 2em; border-bottom: 2px solid #eee; padding-bottom: 0.5em; }
+        h3 { font-size: 1.5em; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2em 0;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            nav a { display: block; margin: 0.5rem 0; }
+            article { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">首页</a>
+        <a href="#blog">技术博客</a>
+        <a href="#projects">项目案例</a>
+        <a href="#contact">联系方式</a>
+    </nav>
+
+    <header id="home">
+        <h1>数据科学实践日志</h1>
+        <p>探索数据价值 | 分享分析洞见</p>
+    </header>
+
+    <article id="blog">
+        <h2>电信客户生存分析报告</h2>
+        <div class="post-date">2023年10月 | 生存分析专题</div>
+
+        <section>
+            <h3>分析背景</h3>
+            <p>基于IBM电信客户数据集(7,043条记录)，运用生存分析方法解决：</p>
+            <ul>
+                <li>客户流失预测与保留策略优化</li>
+                <li>硬件设备故障风险评估</li>
+                <li>客户生命周期价值(CLTV)建模</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>关键发现</h3>
+            <table>
+                <tr><th>风险因素</th><th>风险比(HR)</th><th>影响方向</th></tr>
+                <tr><td>高级套餐</td><td>0.66</td><td>保护因素</td></tr>
+                <tr><td>设备年龄>2年</td><td>1.78</td><td>风险因素</td></tr>
+                <tr><td>月消费金额</td><td>1.36</td><td>风险因素</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>生存曲线特征</h3>
+            <p>通过Kaplan-Meier分析发现：</p>
+            <pre>
+中位生存时间：29个月（95%CI:27-32）
+6个月留存率：92% | 12个月：85% | 24个月：68%</pre>
+        </section>
+
+        <section>
+            <h3>业务应用</h3>
+            <h4>CLTV仪表板架构</h4>
+            <div style="background: #f0f0f0; padding: 1rem; border-radius: 8px;">
+                <p>输入层 → 计算层 → 输出层</p>
+                <ul>
+                    <li>预测准确率：89%（Top20%高价值客户）</li>
+                    <li>响应时间：&lt;2秒（7,000+记录）</li>
+                </ul>
+            </div>
+        </section>
+    </article>
+
+    <footer id="contact">
+        <p>© 2023 张三 | 通过 <a href="https://pages.github.com" target="_blank">GitHub Pages</a> 部署</p>
+        <p>域名注册：通过GitHub教育包获取 | 邮箱：zhangsan@analytics.cn</p>
+    </footer>
+</body>
+</html>
