@@ -3,147 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>生存分析在电信客户流失预测中的应用</title>
+    <title>我的学术网站</title>
     <style>
-        :root {
-            --primary: #2c3e50;
-            --accent: #e74c3c;
-            --text: #34495e;
-        }
-
         body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.8;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 1rem;
+        }
+        nav a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
-            color: var(--text);
         }
-
-        .article-header {
-            text-align: center;
-            margin-bottom: 3rem;
+        .references {
+            background: #f4f4f4;
+            padding: 2rem;
+            margin-bottom: 2rem;
         }
-
-        section {
+        .blog-section {
+            margin-top: 2rem;
+            border-top: 2px solid #333;
+            padding-top: 2rem;
+        }
+        .pdf-container {
+            width: 100%;
+            height: 800px;
             margin: 2rem 0;
-            padding: 1.5rem;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        h1 { color: var(--primary); font-size: 2.4em; }
-        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 0.5em; }
-        
-        /* 交互元素样式 */
-        .interaction-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .ref-section, .llm-section {
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-
-        .ref-section {
-            background: #f0f6ff;
-            border: 1px solid #3498db30;
-        }
-
-        .llm-section {
-            background: #fff3e6;
-            border: 1px solid #e67e2230;
-        }
-
-        .prompt-example {
-            background: white;
-            padding: 1rem;
-            border-radius: 4px;
-            margin: 1rem 0;
-        }
-
-        a.resource-link {
-            color: var(--accent);
-            text-decoration: none;
-            border-bottom: 1px dashed;
-        }
-
-        a.resource-link:hover {
-            color: #c0392b;
-            border-bottom-style: solid;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
 <body>
-    <div class="article-header">
-        <h1>生存分析在电信客户流失预测中的应用</h1>
-        <div class="meta">2025年4月 | 任轩锐</div>
-    </div>
+    <nav>
+        <a href="#home">首页</a>
+        <a href="#references">参考文献</a>
+        <a href="#blog">博客</a>
+    </nav>
 
-    <!-- 报告主体内容 -->
-    <section id="overview">
-        <h2>1. 方法论概述</h2>
-        <p>生存分析通过<span class="highlight">事件时间建模</span>解决以下核心问题：</p>
-        <ul>
-            <li>📉 客户流失动态预测（HR=1.78, p<0.05）</li>
-            <li>⚙️ 设备故障风险量化（AFT加速因子1.47x）</li>
-            <li>💰 CLTV建模（预测准确率89%）</li>
-        </ul>
-    </section>
-
-    <!-- 添加其他章节内容... -->
-
-    <!-- 交互功能区域 -->
-    <div class="interaction-box">
-        <div class="ref-section">
-            <h3>📖 扩展阅读</h3>
+    <div class="container">
+        <section id="references" class="references">
+            <h2>参考文献</h2>
+            <p>您可以在这里查看相关参考文献：</p>
             <ul>
-                <li><a href="#ref1" class="resource-link">生存分析基础理论 (Klein, 2005)</a></li>
-                <li><a href="#ref2" class="resource-link">电信行业应用案例 (IEEE, 2023)</a></li>
+                <li><a href="https://example.com/ref1" target="_blank">参考文献1</a></li>
+                <li><a href="https://example.com/ref2" target="_blank">参考文献2</a></li>
             </ul>
-        </div>
+            <p>需要更多建议？请 <a href="#chat">与AI助手交流</a></p>
+        </section>
 
-        <div class="llm-section">
-            <h3>💬 智能助手</h3>
-            <div class="prompt-example">
-                <p>尝试向AI提问：</p>
-                <blockquote>"如何验证Cox模型的PH假设？"</blockquote>
+        <section class="blog-section" id="blog">
+            <h2>最新报告</h2>
+            <p>以下是我的最新研究报告：</p>
+            
+            <!-- PDF嵌入部分 -->
+            <div class="pdf-container">
+                <embed 
+                    src="your-report.pdf" 
+                    type="application/pdf" 
+                    width="100%" 
+                    height="100%"
+                    >
+                <p>如果PDF无法显示，请 <a href="your-report.pdf">点击这里下载</a></p>
             </div>
-            <a href="https://chat.openai.com/" 
-               target="_blank" 
-               class="resource-link">
-               🚀 开始对话
-            </a>
-        </div>
+        </section>
     </div>
-
-    <!-- 参考文献弹窗 -->
-    <dialog id="refModal">
-        <h3>参考文献详情</h3>
-        <div id="refContent"></div>
-        <button onclick="document.getElementById('refModal').close()">关闭</button>
-    </dialog>
-
-    <script>
-        // 参考文献交互逻辑
-        document.querySelectorAll('.resource-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                if(e.target.hash.startsWith('#ref')) {
-                    e.preventDefault();
-                    const refId = e.target.hash.substr(1);
-                    const content = {
-                        'ref1': 'Klein, J.P. (2005). Survival Analysis: Techniques for Censored Data...',
-                        'ref2': 'Zhang et al. (2023). Churn Prediction in Telecom...'
-                    }[refId];
-                    document.getElementById('refContent').innerHTML = content;
-                    document.getElementById('refModal').showModal();
-                }
-            });
-        });
-    </script>
 </body>
 </html>
